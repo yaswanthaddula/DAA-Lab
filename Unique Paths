@@ -1,0 +1,5 @@
+import math
+def unique_paths(m, n):
+    return math.factorial(m + n - 2) // (math.factorial(m - 1) * math.factorial(n - 1))
+print(unique_paths(7, 3))  
+print(unique_paths(3, 2)) 
