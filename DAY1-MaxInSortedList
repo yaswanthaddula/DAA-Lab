@@ -1,0 +1,6 @@
+def find_max_in_sorted_list(numbers):
+    if not numbers:
+        return "The list is empty."
+    sorted_numbers = sorted(numbers)
+    return sorted_numbers[-1]
+print(find_max_in_sorted_list([])) 
