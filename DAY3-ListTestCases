@@ -1,0 +1,8 @@
+empty_list = []
+one_element_list = [42]  
+identical_elements_list = [7] * 5  
+negative_numbers_list = [-1, -2, -3, -4, -5]  
+print("Empty List:", empty_list)  
+print("One Element List:", one_element_list) 
+print("Identical Elements List:", identical_elements_list) 
+print("Negative Numbers List:", negative_numbers_list)  
