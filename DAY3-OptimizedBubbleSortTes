@@ -1,0 +1,7 @@
+def optimized_sort(input_list):
+    return sorted(input_list)
+input_data = [64, 25, 12, 22, 11]
+expected_output = [11, 12, 22, 25, 64]
+actual_output = optimized_sort(input_data)
+assert actual_output == expected_output, f"Test failed: {actual_output} != {expected_output}"
+print("Test passed: The output is as expected.")
