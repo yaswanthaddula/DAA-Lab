@@ -1,0 +1,16 @@
+def total_value(items, values):
+    return sum(values[i] for i in items)
+def is_feasible(items, weights, capacity):
+    return sum(weights[i] for i in items) <= capacity
+def knapsack_exhaustive_search(weights, values, capacity):
+    from itertools import combinations
+    best_value, best_combination = 0, []
+    for r in range(len(weights) + 1):
+        for combo in combinations(range(len(weights)), r):
+            if is_feasible(combo, weights, capacity):
+                current_value = total_value(combo, values)
+                if current_value > best_value:
+                    best_value, best_combination = current_value, combo
+    return best_combination, best_value
+print(knapsack_exhaustive_search([2, 3, 1], [4, 5, 3], 4))  
+print(knapsack_exhaustive_search([1, 2, 3, 4], [2, 4, 6, 3], 6))
