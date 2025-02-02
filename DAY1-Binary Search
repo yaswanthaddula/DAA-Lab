@@ -1,0 +1,10 @@
+def binary_search(arr, key):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == key:
+            return f"Element {key} found at index {mid}"
+        left, right = (mid + 1, right) if arr[mid] < key else (left, mid - 1)
+    return f"Element {key} not found"
+X = sorted([3, 4, 6, -9, 10, 8, 9, 30])
+print(binary_search(X, -9))
