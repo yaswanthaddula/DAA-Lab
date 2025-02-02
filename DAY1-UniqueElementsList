@@ -1,0 +1,5 @@
+def unique_elements(input_list):
+    return list(set(input_list))
+input_data = [3, 7, 3, 5, 2, 5, 9, 2]
+output_data = unique_elements(input_data)
+print(output_data)
